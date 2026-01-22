@@ -1,0 +1,70 @@
+@font-face {
+    font-family: BonaNova;
+    src: url("./assets/font/BonaNova-Regular.ttf");
+}
+
+@font-face{
+    font-family: BonaNova;
+    src: url("./assets/font/BonaNova-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face{
+    font-family: BonaNova;
+    src: url("./assets/font/BonaNova-Bold.ttf");
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: BonaNova;
+    font-weight: bold;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background-color: #e5e0d5;
+
+    color: #181717;
+    font-size: 18pt;
+}
+
+.presentation{
+    height: 100%;
+
+    display: grid;
+    grid-auto-rows: 100vh;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.slide{
+    scroll-snap-align: start;
+
+    display: grid;
+    place-content: center;
+    grid-template-columns: 80%;
+    grid-template-rows: 70%;
+}
+
+.slide-content{
+    box-shadow: 0 0 1rem #00000034;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.title-slide{
+    display: grid;
+
+    place-content: center;
+
+    text-align: right;
+    padding-right: 2rem;
+}
