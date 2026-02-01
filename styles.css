@@ -449,3 +449,22 @@ ul.authors li::before{
 .results2 .img-and-caption img{
     width: 100%;
 }
+
+
+@media print {
+    body{
+        overflow-y: scroll !important;
+    }
+
+    main{
+        overflow-y: visible !important;
+    }
+
+    .slide {
+        font-size: .8em;
+    }
+
+    .image-view.hidden{
+        display: none;
+    }
+}
