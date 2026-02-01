@@ -15,6 +15,20 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: Rasa;
+    src: url("./assets/font/Rasa/Rasa-VariableFont_wght.ttf");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Rasa;
+    src: url("./assets/font/Rasa/Rasa-Italic-VariableFont_wght.ttf");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
 /** === PAGE SETUP === **/
 
 * {
@@ -22,7 +36,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: BonaNova;
+    font-family: Rasa;
     font-weight: bold;
 
     --clr-accent: #923131;
