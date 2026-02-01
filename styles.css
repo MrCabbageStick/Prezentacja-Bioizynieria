@@ -15,6 +15,8 @@
     font-weight: bold;
 }
 
+/** === PAGE SETUP === **/
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +24,8 @@
 
     font-family: BonaNova;
     font-weight: bold;
+
+    --clr-accent: #923131;
 }
 
 html,body{
@@ -31,7 +35,7 @@ html,body{
 body{
     background-color: #e5e0d5;
 
-    color: #181717;
+    color: #221f1f;
     font-size: 18pt;
 }
 
@@ -50,8 +54,8 @@ body{
 
     display: grid;
     place-content: center;
-    grid-template-columns: 80%;
-    grid-template-rows: 70%;
+    grid-template-columns: min(1000px, 80%);
+    grid-template-rows: min(700px, 70%);
 }
 
 .slide-content{
@@ -60,11 +64,338 @@ body{
     padding: 1rem;
 }
 
+/** === COMMON STYLING === **/
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+span.accent{
+    color: var(--clr-accent);
+}
+
+span.profile-icon{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 100%;
+
+    background-image: url('./assets/img/profile_icon.jpg');
+    background-size: cover;
+
+    display: block;
+}
+
+h2{
+    color: var(--clr-accent);
+    text-decoration: underline;
+    text-underline-offset: .25em;
+}
+
+ul.basic{
+    list-style-type: none;
+}
+
+ul.basic li{
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: .5em;
+}
+
+ul.basic > li::before {
+    content:  "☞";
+    font-size: 1.25em;
+
+    padding-right: .5em;
+}
+
+.img-and-caption{
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+
+    padding: 2rem;
+
+    height: min-content;
+}
+
+.img-and-caption img{
+    height: 90%;
+    align-self: center;
+}
+.img-and-caption p{
+    font-size: .6em;
+    opacity: .75;
+}
+
+/** === SLIDE SPECIFIC === **/
+
+/** TITLE SLIDE **/
 .title-slide{
     display: grid;
-
     place-content: center;
+    gap: 3rem;
 
     text-align: right;
     padding-right: 2rem;
+}
+
+.title-slide h2{
+    opacity: .7;
+    font-size: 2rem;
+    text-decoration: none;
+    color: unset;
+}
+
+
+/** ABOUT SLIDE **/
+
+.about-slide{
+    display: grid;
+    gap: 1rem;
+
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+}
+
+ul.authors{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.authors li{
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    font-size: 1.5em;
+}
+
+ul.authors li::before{
+    content: '';
+
+    width: 1.5em;
+    height: 1.5em;
+
+    border-radius: 100%;
+
+    background-image: url('./assets/img/profile_icon.jpg');
+    background-size: cover;
+
+    display: block;
+}
+
+.about-slide p.university{
+    font-size: 1.5em;
+}
+
+.about-slide p.date{
+    opacity: .75;
+}
+
+/** PROBLEMS SLIDE **/
+
+.the-problems{
+    display: grid;
+    grid-template-rows: min-content auto;
+
+    gap: 3em;
+
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+}
+
+.the-problems ul{
+    font-size: 1.5em;
+}
+
+.the-problems ul > li{
+    margin-block-start: 1em;
+}
+
+/** SOLUTION **/
+
+.solution{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2em;
+
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+}
+
+.solution ul,
+.solution p {
+    font-size: 1.25em;
+}
+
+/** FILTERING METHODS **/
+
+.filtering-methods{
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 3em;
+}
+
+.filtering-methods ul,
+.filtering-methods p{
+    font-size: 1.25em;
+}
+
+/** DCT **/
+
+.dct{
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    gap: 3em;
+}
+
+.dct p {
+    font-size: 1.25em;
+}
+
+/** DFT **/
+
+.dft{
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    gap: 3em;
+}
+
+.dft p {
+    font-size: 1.25em;
+}
+
+/** DWT **/
+
+.dwt{
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    gap: 3em;
+}
+
+.dwt p {
+    font-size: 1.25em;
+}
+
+/** MODELS **/
+
+.models{
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 3em;
+}
+
+.models ul,
+.models p{
+    font-size: 1.25em;
+}
+
+/** BiLSTM & BiGRU & Test setup **/
+.bilstm,
+.bigru,
+.test-setup{
+    display: grid;
+    grid-template-rows: min-content auto;
+
+    align-items: center;
+
+    font-size: 1.25em;
+
+    padding-inline: 4rem;
+    padding-top: 3rem;
+}
+
+.bilstm .img-and-caption,
+.bigru .img-and-caption,
+.test-setup .img-and-caption{
+    height: 85%;
+}
+
+.test-setup .img-and-caption img{
+    height: unset;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/** TEST SUBJECTS **/
+.test-subjects{
+    display: grid;
+    grid-template-rows: min-content min-content 50%;
+
+    align-items: center;
+
+    font-size: 1.25em;
+
+    padding-inline: 4rem;
+    padding-top: 3rem;
+
+    gap: 2rem;
+}
+
+.test-subjects .img-and-caption{
+    height: 85%;
+    padding: 0;
+}
+
+.test-subjects .img-and-caption img{
+    /* height: 80%; */
+    /* height: unset; */
+    /* width: 80%; */
+    /* max-height: 500px; */
+    height: 350px;
+}
+
+/** RESULTS **/
+
+.results1{
+    padding-inline: 4rem;
+    padding-block-start: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 3em;
+
+    font-size: 1.25em;
+}
+
+.results2{
+    display: grid;
+    grid-template-rows: min-content auto;
+
+    align-items: center;
+
+    font-size: 1.25em;
+
+    padding-inline: 4rem;
+    padding-top: 3rem;
+}
+
+.results2 .img-and-caption{
+    height: 85%;
+}
+
+.results2 .img-and-caption img{
+    width: 100%;
 }

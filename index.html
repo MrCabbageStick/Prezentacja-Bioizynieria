@@ -11,10 +11,193 @@
 
     <main class="presentation">
 
-        <div class="slide">
+        <div class="slide" id="slide-1">
             <div class="slide-content title-slide">
-                <h1>Rozpoznawanie alkoholizmu z użyciem sygnałów AEG</h1>
+                <h1>
+                    Improving <span class="accent">EEG classification</span> of <span class="accent">alcoholic</span> 
+                    and control subjects using <span class="accent">DWT-CNN-BiGRU</span> 
+                    with various noise filtering techniques
+                </h1>
                 <h2>Daniel Wiszniowski</h2>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-2">
+            <div class="slide-content about-slide">
+                <h2>O ARTYKULE</h2>
+
+                <ul class="authors">
+                    <li>Nidhi Patel</li>
+                    <li>Jaiprakash Verma</li>
+                    <li>Swati Jain</li>
+                </ul>
+
+                <p class="university">
+                    Department of Computer Science and Engineering, Nirma University, <br> Ahmedabad, Gujarat, India
+                </p>
+
+                <p class="date">
+                    Opublikowany: 19 sierpnia 2025, <span class="accent">Frontiers in Neuroinformatics</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-3">
+            <div class="slide-content the-problems">
+                <h2>PROBLEMY DO ROZWIĄZANIA</h2>
+
+                <ul class="basic">
+                    <li>Obecny sposób diagnozowania alkoholizmu opiera się na podstawie subiektywnej oceny</li>
+                    <li>Sygnały EEG są podatne na zakłócenia i trudne w analizie</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-4">
+            <div class="slide-content solution">
+                <h2>ROZWIĄZANIE</h2>
+
+                <p>
+                    Zastosowanie nowatorskiego modelu <span class="accent">DWT-CNN-BiGRU</span> łączącego 3 technologie
+                </p>
+
+                <ul class="basic">
+                    <li><span><span class="accent">DWT</span> (Discrete Wavelet Transform)</span></li>
+                    <li><span><span class="accent">CNN</span> (Convolutional Neural Network)</span></li>
+                    <li><span><span class="accent">BiRGU</span> (Bidirectional Gated Recurrent Units)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-5">
+            <div class="slide-content filtering-methods">
+                <h2>METODY FILTRUJĄCE</h2>
+
+                <p>Eksperyment badał zastosowanie 3 różnych metod filtrujących dane wejściowe</p>
+
+                <ul class="basic">
+                    <li><span><span class="accent">DCT</span> (Discrete Cosine Transform)</span></li>
+                    <li><span><span class="accent">DFT</span> (Discrete Fourier Transform)</span></li>
+                    <li><span><span class="accent">DWT</span> (Discrete Wavelet Transform)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-6">
+            <div class="slide-content dct">
+                <h2>DCT</h2>
+
+                <p>
+                    Zadaniem DCT jest przedstawienie sygnału za pomocą sumy kosinusów o różnych częstotliwościach.
+                    Następnie możliwe jest odseparowanie komponentów o wysokiej częstotliwości i odtworzenie danych używając fukncji odwrotnej - IDCT.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-7">
+            <div class="slide-content dft">
+                <h2>DFT</h2>
+
+                <p>
+                    DFT przekszatałca sygnał na sumę zespolonych fal sinusoidalnych o różnych częstotliwościach, 
+                    amplitudach i fazach. Następnie można zidentyfikować pasma częstotliwości zdominowane przez zakłocenia, 
+                    zastosować odpowiedni filtr usuwający niepotrzebne częstotliwości i użyć IDFT aby odtworzyć sygnał.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-8">
+            <div class="slide-content dwt">
+                <h2>DWT</h2>
+
+                <p>
+                    DWT przekształca sygnał na reprezentację czasowo-częstotliwościową. 
+                    Sygnał EEG rozkładany jest na 4 poziomy, następnie każdy współczynnik detali ulega miękkiemu progowaniu, 
+                    wyciszając szum i zachowując kluczowe komponenty nerwowe. Sygnał zostaje odtworzony poprzez odwrócenie DWT.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-9">
+            <div class="slide-content models">
+                <h2>MODELE</h2>
+
+                <p>Eksperyment badał zastosowanie 2 modeli</p>
+
+                <ul class="basic">
+                    <li><span><span class="accent">CNN-BiLSTM</span> - Bidirectional Long Short-Term Memory</span></li>
+                    <li><span><span class="accent">CNN-BiGRU</span> - Bidirectional Gated Recurrent Unit</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-10">
+            <div class="slide-content bilstm">
+                <h2>BiLSTM</h2>
+
+                <div class="img-and-caption">
+                    <img src="./assets/img/model_layers.svg" alt="BiLSTM Model layers">
+                    <p>Rysunek warstw modelu BiLSTM odtworzony z opisu</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-11">
+            <div class="slide-content bigru">
+                <h2>BiGRU</h2>
+
+                <div class="img-and-caption">
+                    <img src="./assets/img/model_layers.svg" alt="BiGRU model layers">
+                    <p>Rysunek warstw modelu BiGRU odtworzony z obrazka</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-12">
+            <div class="slide-content test-setup">
+                <h2>PRZEBIEG BADANIA</h2>
+
+                <div class="img-and-caption">
+                    <img src="./assets/img/setup.jpg" alt="Test setup">
+                    <p>Schemat przebiegu badania</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-13">
+            <div class="slide-content test-subjects">
+                <h2>BADANI</h2>
+
+                <p>W badaniu uczestniczyło 16 osób</p>
+
+                <div class="img-and-caption">
+                    <img src="./assets/img/subjects.jpg" alt="Test subjects">
+                    <p>Podział badanych</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-14">
+            <div class="slide-content results1">
+                <h2>WYNIKI</h2>
+
+                <p>Najlepsze wyniki dla sprawdzanych modeli</p>
+
+                <ul class="basic">
+                    <li><span><span class="accent">CNN-BiLSTM</span> - 93% dokładności</span></li>
+                    <li><span><span class="accent">CNN-BiGRU</span> - 94% dokładności</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-15">
+            <div class="slide-content results2">
+                <h2>WYNIKI</h2>
+
+                <div class="img-and-caption">
+                    <img src="./assets/img/results_table.jpg" alt="Results table">
+                    <p>Tabela wyników badania</p>
+                </div>
             </div>
         </div>
 
