@@ -91,35 +91,35 @@
 
         <div class="slide" id="slide-6">
             <div class="slide-content dct">
-                <h2>DCT</h2>
+                <h2>FILTROWANIE z DCT</h2>
 
                 <p>
-                    Zadaniem DCT jest przedstawienie sygnału za pomocą sumy kosinusów o różnych częstotliwościach.
-                    Następnie możliwe jest odseparowanie komponentów o wysokiej częstotliwości i odtworzenie danych używając fukncji odwrotnej - IDCT.
+                    <span class="accent">DCT</span> przedstawia sygnał za pomocą sumy <span class="accent">cosinusów</span> o różnych częstotliwościach.
+                    Następnie odseparowane zostają komponenty o <span class="accent">wysokiej częstotliwości</span>, a dane są odtwarzane używając funkcji odwrotnej - <span class="accent">IDCT</span>.
                 </p>
             </div>
         </div>
 
         <div class="slide" id="slide-7">
             <div class="slide-content dft">
-                <h2>DFT</h2>
+                <h2>FILTROWANIE z DFT</h2>
 
                 <p>
-                    DFT przekszatałca sygnał na sumę zespolonych fal sinusoidalnych o różnych częstotliwościach, 
-                    amplitudach i fazach. Następnie można zidentyfikować pasma częstotliwości zdominowane przez zakłocenia, 
-                    zastosować odpowiedni filtr usuwający niepotrzebne częstotliwości i użyć IDFT aby odtworzyć sygnał.
+                    <span class="accent">DFT</span> przekształca sygnał na sumę <span class="accent">zespolonych</span> fal sinusoidalnych o różnych częstotliwościach, 
+                    amplitudach i fazach. Następnie zidentyfikowane zostają pasma częstotliwości zdominowane przez zakłocenia, 
+                    zostaje zastosowany odpowiedni filtr <span class="accent">usuwający niepotrzebne częstotliwości</span>, a sygnał zostaje odtworzony z użyciem <span class="accent">IDFT</span>.
                 </p>
             </div>
         </div>
 
         <div class="slide" id="slide-8">
             <div class="slide-content dwt">
-                <h2>DWT</h2>
+                <h2>FILTROWANIE z DWT</h2>
 
                 <p>
-                    DWT przekształca sygnał na reprezentację czasowo-częstotliwościową. 
-                    Sygnał EEG rozkładany jest na 4 poziomy, następnie każdy współczynnik detali ulega miękkiemu progowaniu, 
-                    wyciszając szum i zachowując kluczowe komponenty nerwowe. Sygnał zostaje odtworzony poprzez odwrócenie DWT.
+                    <span class="accent">DWT</span> przekształca sygnał na reprezentację <span class="accent">czasowo-częstotliwościową</span>. 
+                    Sygnał EEG rozkładany jest na <span class="accent">4 poziomy</span>, następnie każdy <span class="accent">współczynnik detali</span> poddawany jest <span class="accent">miękkiemu progowaniu</span> (soft thresholding), 
+                    redukując szum i zachowując kluczowe komponenty sygnału. Następnie zostaje on odtworzony poprzez <span class="accent">odwrócenie DWT</span>.
                 </p>
             </div>
         </div>
@@ -208,6 +208,12 @@
         </div>
 
     </main>
+
+    <div class="image-view hidden" js-image-view>
+        <div class="image-wrapper">
+            <img src="">
+        </div>
+    </div>
     
 </body>
 </html>
