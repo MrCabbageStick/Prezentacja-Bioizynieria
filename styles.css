@@ -338,8 +338,8 @@ ul.authors li::before{
     padding-block-start: 3rem;
 
     display: grid;
-    grid-template-rows: repeat(2, min-content);
-    gap: 3em;
+    grid-template-rows: repeat(3, min-content);
+    gap: 1em;
 }
 
 .dwt p {
@@ -466,5 +466,13 @@ ul.authors li::before{
 
     .image-view.hidden{
         display: none;
+    }
+
+    .dwt img{
+        height: 80%;
+    }
+
+    .test-subjects .img-and-caption{
+        height: 50%;
     }
 }

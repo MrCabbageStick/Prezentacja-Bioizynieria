@@ -39,6 +39,8 @@ W badaniu użyto 4 poziomowego DWT, współczynniki detali są poddawane miękki
 Sygnał jest odtwarzany przez odwrócenie DWT
 
 # Modele
+Uczone na bazie danych Kaggle
+
 
 # BiLSTM
 Budowa:
